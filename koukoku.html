@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>電子公告 | 株式会社リバーサル</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Noto+Sans+JP:wght@300;400;500&family=Noto+Serif+JP:wght@300;400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --forest-deep: #1a2e1a;
+    --forest-light: #3d6b3d;
+    --gold: #c9a84c;
+    --cream: #f7f5f0;
+    --text-dark: #1a2312;
+    --text-light: #6a7a6a;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Noto Sans JP', sans-serif;
+    background: var(--cream);
+    color: var(--text-dark);
+  }
+
+  /* NAV */
+  nav {
+    background: var(--forest-deep);
+    padding: 0 48px;
+    height: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+  }
+  .logo-mark {
+    width: 38px; height: 38px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+  .logo-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    color: white;
+  }
+  .nav-back {
+    color: rgba(255,255,255,0.7);
+    text-decoration: none;
+    font-size: 13px;
+    letter-spacing: 0.05em;
+    transition: color 0.3s;
+  }
+  .nav-back:hover { color: white; }
+
+  /* HERO */
+  .page-hero {
+    background: var(--forest-deep);
+    padding: 64px 48px;
+    text-align: center;
+    border-bottom: 1px solid rgba(201,168,76,0.3);
+  }
+  .page-hero-label {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 11px;
+    letter-spacing: 0.3em;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+  .page-hero h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 40px;
+    font-weight: 300;
+    color: white;
+    margin-bottom: 12px;
+  }
+  .page-hero p {
+    font-size: 13px;
+    color: rgba(255,255,255,0.5);
+    font-weight: 300;
+  }
+
+  /* MAIN */
+  .main-content {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 80px 48px;
+  }
+
+  .notice-box {
+    background: white;
+    border: 1px solid rgba(61,107,61,0.15);
+    border-radius: 4px;
+    padding: 48px;
+    margin-bottom: 32px;
+  }
+  .notice-box h2 {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--forest-deep);
+    margin-bottom: 24px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+  }
+  .notice-empty {
+    text-align: center;
+    padding: 48px 0;
+    color: var(--text-light);
+    font-size: 14px;
+    line-height: 1.9;
+    font-weight: 300;
+  }
+  .notice-empty p { margin-bottom: 8px; }
+
+  .company-info {
+    background: white;
+    border: 1px solid rgba(61,107,61,0.15);
+    border-radius: 4px;
+    padding: 32px 48px;
+  }
+  .company-info h3 {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--text-light);
+    letter-spacing: 0.08em;
+    margin-bottom: 16px;
+  }
+  .company-info table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+  }
+  .company-info td {
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(0,0,0,0.06);
+    vertical-align: top;
+  }
+  .company-info td:first-child {
+    color: var(--text-light);
+    width: 160px;
+    font-weight: 500;
+    font-size: 13px;
+  }
+
+  /* FOOTER */
+  footer {
+    background: var(--forest-deep);
+    padding: 32px 48px;
+    text-align: center;
+    color: rgba(255,255,255,0.4);
+    font-size: 12px;
+  }
+  footer a {
+    color: rgba(255,255,255,0.4);
+    text-decoration: none;
+    margin: 0 12px;
+    transition: color 0.3s;
+  }
+  footer a:hover { color: rgba(255,255,255,0.8); }
+  .footer-links { margin-bottom: 12px; }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">
+    <div class="logo-mark">
+      <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='48' fill='none' stroke='%23217a21' stroke-width='2'/%3E%3Cpath d='M50 2 A48 48 0 0 1 50 98 A24 24 0 0 1 50 50 A24 24 0 0 0 50 2 Z' fill='%23217a21'/%3E%3Ccircle cx='50' cy='26' r='12' fill='white'/%3E%3Ccircle cx='50' cy='74' r='12' fill='%23217a21'/%3E%3Ccircle cx='50' cy='26' r='5' fill='%23217a21'/%3E%3Ccircle cx='50' cy='74' r='5' fill='white'/%3E%3C/svg%3E" alt="Reversal Logo" style="width:100%;height:100%;object-fit:contain;" />
+    </div>
+    <span class="logo-text">Reversal</span>
+  </a>
+  <a href="index.html" class="nav-back">← トップページへ戻る</a>
+</nav>
+
+<div class="page-hero">
+  <p class="page-hero-label">Legal Notice</p>
+  <h1>電子公告</h1>
+  <p>株式会社リバーサル　電子公告ページ</p>
+</div>
+
+<div class="main-content">
+
+  <div class="notice-box">
+    <h2>公告事項</h2>
+    <div class="notice-empty">
+      <p>現在、公告すべき事項はありません。</p>
+      <p>公告が必要な場合は、本ページに掲載いたします。</p>
+    </div>
+  </div>
+
+  <div class="company-info">
+    <h3>会社情報</h3>
+    <table>
+      <tr>
+        <td>会社名</td>
+        <td>株式会社リバーサル</td>
+      </tr>
+      <tr>
+        <td>所在地</td>
+        <td>〒885-0044　宮崎県都城市安久町2544-2</td>
+      </tr>
+      <tr>
+        <td>代表者</td>
+        <td>代表取締役　鈴木　秀明</td>
+      </tr>
+      <tr>
+        <td>設立</td>
+        <td>2026年5月</td>
+      </tr>
+      <tr>
+        <td>事業内容</td>
+        <td>森林経営、造林事業、収穫事業</td>
+      </tr>
+      <tr>
+        <td>連絡先</td>
+        <td>090-4160-3908</td>
+      </tr>
+    </table>
+  </div>
+
+</div>
+
+<footer>
+  <div class="footer-links">
+    <a href="index.html">トップページ</a>
+    <a href="koukoku.html">電子公告</a>
+  </div>
+  © 2026 株式会社リバーサル All rights reserved.
+</footer>
+
+</body>
+</html>
